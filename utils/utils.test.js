@@ -3,15 +3,22 @@ const expect = require('expect');
 
 const utils = require('./utils');
 
-it('should add two numbers', function() {
-    var res = utils.add(33,11);
-  
-    expect(res).toBe(44);             //.toBeAn("number");
+describe('utils',function(){
 
-    // if (res !== 44){
-    //     throw new Error(`Expected 44, but got ${res}`);
-    // }
+    describe('#add', function(){
+        it('should add two numbers', function() {
+            var res = utils.add(33,11);
+          
+            expect(res).toBe(44);             //.toBeAn("number");
+        
+            // if (res !== 44){
+            //     throw new Error(`Expected 44, but got ${res}`);
+            // }
+        });
+        
+    });
 });
+
 
 it('should async add two numbers',function(done){
     utils.asyncAdd(4, 3, (sum) => {
